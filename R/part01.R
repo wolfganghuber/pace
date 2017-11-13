@@ -75,11 +75,8 @@ plotPatientStat = function(pats, gap, ptab=patmeta) {
   # set the order of Diagnosis
   ord = smunlist(
     tapply(1:nrow(plotDF), plotDF$Origin,
-           function(idx) {
-             plotDF$Diagnosis[
-               idx[order(plotDF[idx,"NO"],decreasing=TRUE)]])[
-                 names(pace:::diagAmt)])
-           }
+           function(idx) plotDF$Diagnosis[idx[order(plotDF[idx,"NO"], 
+           decreasing=TRUE)]])[names(pace:::diagAmt)])
   plotDF$Diagnosis = factor(plotDF$Diagnosis, levels=ord)
   
   # adjustments for gap
