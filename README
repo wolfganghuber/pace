@@ -1,0 +1,4 @@
+To install, please start R >= 3.4 and run
+ 
+source('https://www.bioconductor.org/biocLite.R')
+biocLite("MalgorzataOles/pace")
